@@ -1,0 +1,60 @@
+{
+  "posts": [
+    {
+      "RegNo": "28451",
+      "id": 7,
+      "firstName": "",
+      "lastName": "",
+      "age": 0,
+      "batch": 0,
+      "fee": 0,
+      "attendence": "absent",
+      "email": "2022-05-27",
+      "name": "Madhivanan",
+      "date": "2022-05-20"
+    },
+    {
+      "RegNo": "28583",
+      "firstName": "",
+      "lastName": "",
+      "age": 0,
+      "batch": 0,
+      "fee": 0,
+      "attendence": "absent",
+      "email": "akshata2gmail.com",
+      "name": "Akshata",
+      "date": "2022-05-20",
+      "id": 8
+    },
+    {
+      "RegNo": "28579",
+      "firstName": "",
+      "lastName": "",
+      "age": 0,
+      "batch": 0,
+      "fee": 0,
+      "attendence": "present",
+      "email": "irfan@htcindia.com",
+      "name": "irfan",
+      "date": "2022-05-12",
+      "id": 9
+    },
+    {
+      "RegNo": "43527",
+      "firstName": "",
+      "lastName": "",
+      "age": 0,
+      "batch": 0,
+      "fee": 0,
+      "attendence": "present",
+      "email": "madhu@gmail.com",
+      "name": "Madhu",
+      "date": "2022-05-27",
+      "id": 10
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

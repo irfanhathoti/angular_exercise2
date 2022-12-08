@@ -1,0 +1,24 @@
+<app-attendence></app-attendence>
+
+
+
+<h2>Parent Component</h2>
+
+<div>
+    <table>
+        <thead>
+            <tr *ngFor="let attendenceStatus of attendenceList ">
+                <th>
+                    <input type="radio" name="employeeid" id="" (change)="attendenceChoice(attendenceStatus)"
+                        [value]="attendenceStatus.attendence">
+                    &nbsp;{{attendenceStatus.attendence}}
+                </th>
+            </tr>
+        </thead>
+    </table>
+    
+</div>
+
+
+
+<app-child [attendence]="attendenceData" ></app-child>

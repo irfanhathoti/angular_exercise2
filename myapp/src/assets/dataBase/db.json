@@ -1,0 +1,53 @@
+{
+    "posts": [
+      {
+        "RegNo": "28451",
+        "id": 7,
+        "firstName": "Irfan",
+        "lastName": "H",
+        "designation":"UI/UX",
+        "salary":43000,
+        "age": 0,
+        "batch": 0,
+        "fee": 0,
+        "attendence": "absent",
+        "email": "2022-05-27",
+        "name": "Madhivanan",
+        "date": "2022-05-20"
+      },
+      {
+        "RegNo": "28583",
+        "firstName": "Madhivanan",
+        "lastName": "Ramesh",
+        "designation":"Core Java",
+        "salary":47000,
+        "age": 0,
+        "batch": 0,
+        "fee": 0,
+        "attendence": "absent",
+        "email": "akshata2gmail.com",
+        "name": "Akshata",
+        "date": "2022-05-20",
+        "id": 8
+      },
+      {
+        "RegNo": "28579",
+        "firstName": "Varun",
+        "lastName": "K",
+        "designation":"UI/UX",
+        "salary":30000,
+        "age": 0,
+        "batch": 0,
+        "fee": 0,
+        "attendence": "present",
+        "email": "irfan@htcindia.com",
+        "name": "irfan",
+        "date": "2022-05-12",
+        "id": 9
+      }
+    ],
+    "comments": [],
+    "profile": {
+      "name": "typicode"
+    }
+  }

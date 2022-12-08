@@ -1,0 +1,151 @@
+<!-- <nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h2 class="text-light">Angular Crud</h2>
+        <div class="d-flex">
+            <button type="button" data-bs-toggle="modal" (click)="AddStudent()" data-bs-target="#exampleModal" class="btn btn-success"> Add
+                Student</button>
+        </div>
+    </div>
+</nav>
+<table class="table">
+    <thead>
+        <tr class="">
+            <th scope="col">RegNo</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Attendence</th>
+            <th scope="col">Date</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let stu of studentList">
+        <td>{{stu.RegNo}}</td>
+        <td> {{stu.name}} </td>
+        <td>{{stu.email}}</td>
+        <td> {{stu.attendence}} </td>
+        <td> {{stu.date}} </td>
+        <td>
+            <button  class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="onEdit(stu)" >Edit</button>
+            <button class="btn btn-danger mx-3" (click)="deleteStudent(stu)">Delete</button>
+        </td>
+    </tbody>
+</table>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Attendence List</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formValue" >
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">RegNo</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" formControlName = "RegNo" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" formControlName = "name" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleInputPassword1" formControlName = "email" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Attendence</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" formControlName ="attendence" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="exampleInputPassword1"  formControlName = "date" >
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" *ngIf="showAdd" (click)="poststudents()" class="btn btn-primary">Add</button>
+                        <button   class="btn btn-primary" *ngIf="showUpdate" (click)="updateStudent()">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+ -->
+
+
+<!-- Ng prime table -->
+<h3 class="d-flex justify-content-center">Employee Details</h3>
+<div class="table">
+    <button class="d-flex justify-content-end p-button-success" pButton (click)="showModalDialog() "
+        icon="pi pi-external-link" label="Add Employee" style="height:25px"></button>
+
+    <p-table [value]=" studentList" responsiveLayout="scroll" styleClass="p-datatable-gridlines">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>RegNo</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Attendence</th>
+                <th>Date</th>
+                <th>Action</th>
+
+
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-stu>
+            <tr>
+                <td>{{stu.RegNo}}</td>
+                <td>{{stu.name}}</td>
+                <td>{{stu.email}}</td>
+                <td>{{stu.attendence}}</td>
+                <td>{{stu.date}}</td>
+                <td style="width: 20% ; margin: auto; "><button pButton label="delete" (click)="deleteStudent(stu)"
+                        class="p-button-danger"></button>
+                    <button pButton label="Edit" (click)="showModalDialog(); onEdit(stu) " 
+                        class="p-button-warning"></button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+
+
+    <p-dialog header="Employee Details" [(visible)]="displayModal" [modal]="true" [style]="{width: '40vw'}"
+        [draggable]="false" [resizable]="false">
+        <form [formGroup]="formValue">
+            <label class="form-label">RegNo</label>
+            <div class="mb-3 p-inputgroup">
+                <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                <input type="text" formControlName="RegNo" pInputText>
+            </div>
+            <label class="form-label">Name</label>
+            <div class=" p-inputgroup">
+                <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                <input type="text" pInputText formControlName="name">
+            </div>
+            
+            <div class="mb-3 -inputgroup">
+                <label class="form-label">Email</label>
+                <input type="text" class="form-control" formControlName="email">
+            </div>
+
+            <label class="form-label">Attendence</label>
+            <div class="mb-3 p-inputgroup">
+                <span class="p-inputgroup-addon">$</span>
+                <input type="text" pInputText formControlName="attendence">
+            </div>
+            <label class="form-label">Date</label>
+            <div class="mb-3 p-inputgroup">
+                <span class="p-inputgroup-addon">$</span>
+                <input type="date" pInputText formControlName="date">
+            </div>
+        </form>
+        <ng-template pTemplate="footer">
+            <!-- <p-button icon="pi pi-check" (click)="displayModal=false" label="Ok" styleClass="p-button-text"></p-button> -->
+            <button pButton id="close" class="p-button-danger" (click)="displayModal=false">Close</button>
+            <p-button type="button" *ngIf="showAdd" (click)="poststudents();displayModal=false">Add</p-button>
+            <p-button type="button" *ngIf="showUpdate" (click)="updateStudent();displayModal=false ">Update</p-button>
+        </ng-template>
+    </p-dialog>
+
+</div>

@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>RegNo</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Attendence</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let student of student | attendenceFilter : attendence">
+        <tr>
+            <td scope = "col"> {{student.RegNo}} </td>
+            <td scope = "col"> {{student.name}} </td>
+            <td scope = "col"> {{student.email}} </td>
+            <td scope = "col"> {{student.attendence}} </td>
+            <td scope = "col"> {{student.date}} </td>
+
+        </tr>
+    </tbody>
+    
+</table>

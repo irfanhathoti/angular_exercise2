@@ -1,0 +1,115 @@
+<!-- <p *ngFor="let  stu of   Students"> -->
+<!-- *ngFor is the same like for of lop in js-->
+<!-- </p> -->
+<div>
+    <h1>3.Students Details</h1>
+    <!-- <p-table [value]=Students responsiveLayout="scroll">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>RegNo</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Age</th>
+                <th>Batch</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-stu>
+            <tr>
+                <td>{{stu.RegNo}}</td>
+                <td> {{stu.firstName}}</td>
+                <td> {{stu.lastName}} </td>
+                <td> {{stu.age}} </td>
+                <td> {{stu.batch}} </td>
+            </tr>
+        </ng-template>
+    </p-table> -->
+</div>
+
+<br />
+<br />
+<!-- <h4> Select the Batches </h4> -->
+<!-- <p-dropdown [options]="batches" [(ngModel)]="SelectBatch" optionLabel="name"> {{batches}} </p-dropdown> -->
+<!-- <select [(ngModel)]="SelectBatch">
+    <option *ngFor="let batch of batches" [value]=" batch"> {{batch}} </option>
+</select>
+
+<p-table [value]=Students responsiveLayout="scroll">
+
+    <ng-template pTemplate="header">
+        <tr>
+            <th>RegNo</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Age</th>
+            <th>Batch</th>
+            <th>Fees</th>
+
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-stu>
+        <tr *ngIf="stu.batch == SelectBatch">
+            <td>{{stu.RegNo}}</td>
+            <td> {{stu.firstName}}</td>
+            <td> {{stu.lastName}} </td>
+            <td> {{stu.age}} </td>
+            <td> {{stu.batch}} </td>
+            <td> {{stu.fee }} </td>
+        </tr>
+    </ng-template>
+</p-table> -->
+
+<!-- <p-table [value]=Students responsiveLayout="scroll">
+
+    <ng-template pTemplate="header">
+        <tr>
+            <th>RegNo</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>FullName</th>
+            <th>Age</th>
+            <th>Batch</th>
+            <th>Fees</th>
+
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-stu>
+        <tr>
+            <td>{{stu.RegNo }} </td>
+            <td> {{stu.firstName | lowercase}}</td>
+            <td> {{stu.lastName |uppercase }} </td>
+            <td> {{stu.fullName() | titlecase }} </td>
+            <td> {{stu.age | number: '1.1-2'}} </td>
+            <td> {{stu.batch | date :'MM-DD-YYYY' }} </td>
+            <td> {{stu.fee | currency : 'USD':'symbol':'1.2-2'}} </td>
+        </tr>
+    </ng-template>
+</p-table>
+
+
+<h2> Pips </h2>
+<input type="text" [(ngModel)]="batch" placeholder="search batch" name="" id="">
+<table  class="table table-borderd" >
+
+    <thead>
+        <tr>
+            <th>RegNo</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Age</th>
+            <th>Batch</th>
+            <th>Fees</th>
+
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let stu of Students | batchFilter : batch">
+            <td>{{stu.RegNo}}</td>
+            <td> {{stu.firstName}}</td>
+            <td> {{stu.lastName}} </td>
+            <td> {{stu.age}} </td>
+            <td> {{stu.batch}} </td>
+            <td> {{stu.fee }} </td>
+        </tr>
+    </tbody>
+</table>
+ -->
